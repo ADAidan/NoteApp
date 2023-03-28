@@ -6,7 +6,8 @@ class NotesApp extends React.Component {
     super(props);
     this.state = {
       title: ['React', 'Javascript'],
-      content: ['React\nReact is a Javascript library for front-end development', 'Javascript is a programming language used for web development'],
+      content: ['React\nReact is an open-source JavaScript library used for building user interfaces and front-end web applications. It allows developers to create reusable UI components and efficiently manage the state of their applications, making it a powerful and versatile tool for building modern web applications.', 
+      'Javascript\nJavaScript is a high-level programming language used to create interactive and dynamic websites.'],
       selectedNoteIndex: 0
     }
     this.handleChange = this.handleChange.bind(this)
@@ -114,7 +115,7 @@ function Note(props) {
     <div index={props.index} onClick={props.handleClick} style={{
       backgroundColor: '#dadada', padding: '2rem', 
       fontSize: '1.5rem', marginBottom: '1rem', 
-      fontWeight: 'bold'
+      fontWeight: 'bold', cursor: 'pointer'
     }}>{title}</div>
   )
 }
